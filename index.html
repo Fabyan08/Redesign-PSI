@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="overflow-x-hidden">
+    <main class="font-poppins">
+      <section class="bg-primary w-full">
+        <div
+          class="bg-white w-40 h-40 rounded-full absolute -top-12 -left-12 blur-2xl z-[999999]"
+        ></div>
+        <div
+          class="bg-white hidden lg:flex w-60 h-60 rounded-full absolute bottom-[120px] -right-12 blur-3xl z-[999999]"
+        ></div>
+        <div class="mw fixed w-full  z-[999999999999999]">
+          <div class="pt-10">
+            <nav>
+              <div class="navbar-menu relative z-50 hidden">
+                <div
+                  class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
+                ></div>
+                <nav
+                  class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
+                >
+                  <div class="flex justify-between items-center mb-8">
+                    <a href="/" class="flex text-primary items-center gap-3">
+                      <img src="assets/images/logo.svg" alt="" />
+                      <h1 class="text-2xl font-bold">PSI</h1>
+                    </a>
+                    <button class="navbar-close">
+                      <svg
+                        class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M6 18L18 6M6 6l12 12"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div>
+                    <ul>
+                      <li class="mb-1">
+                        <a
+                          class="block p-4 text-sm font-semibold text-white bg-primary hover:bg-blue-50 hover:text-kuning rounded-xl"
+                          href="#"
+                          >Beranda</a
+                        >
+                      </li>
+                      <li class="mb-1">
+                        <a
+                          class="block p-4 text-sm font-semibold text-primary hover:bg-blue-50 hover:text-kuning rounded"
+                          href="#"
+                          >Tentang PSI</a
+                        >
+                      </li>
+                      <li class="mb-1">
+                        <a
+                          class="block p-4 text-sm font-semibold text-primary hover:bg-blue-50 hover:text-kuning rounded"
+                          href="#"
+                          >PSI Buat Kamu</a
+                        >
+                      </li>
+                      <li class="mb-1">
+                        <a
+                          class="block p-4 text-sm font-semibold text-primary hover:bg-blue-50 hover:text-kuning rounded"
+                          href="#"
+                          >Dukungan Kamu</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </nav>
+            <nav
+              class="bg-white w-full rounded-2xl p-4 h-fit flex items-center justify-between"
+            >
+              <img src="assets/images/logo.svg" class="w-12" alt="" />
+              <div class="hidden md:flex">
+                <ul class="flex flex-row gap-3 font-bold">
+                  <div class="flex flex-col">
+                    <li class="text-primary"><a href="">Beranda</a></li>
+                    <hr class="border-2 border-primary w-1/2" />
+                  </div>
+                  <li class="text-bleck"><a href="">Tentang PSI</a></li>
+                  <li class="text-bleck"><a href="">PSI Buat Kamu</a></li>
+                  <li class="text-bleck"><a href="">Dukungan Kamu</a></li>
+                </ul>
+              </div>
+              <div class="hidden md:flex">
+                <div class="relative">
+                  <img
+                    src="assets/icons/search.svg"
+                    class="text-white absolute left-2 top-1/2 transform -translate-y-1/2"
+                  />
+
+                  <input
+                    id="Search"
+                    type="text"
+                    name="Search"
+                    class="bg-primary p-2 pl-8 h-10 rounded-[10px] border-white/30 text-white placeholder:text-white"
+                    placeholder="Search"
+                  />
+                </div>
+              </div>
+              <div class="md:hidden">
+                <button class="navbar-burger flex items-center text-kuning p-3">
+                  <svg
+                    class="block h-4 w-4 fill-current"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>Mobile menu</title>
+                    <path
+                      d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <header class="bg-primary relative h-fit z-[9999] pt-40">
+        <div
+          class="mw lg:flex relative justify-between items-center z-[99999999999]"
+        >
+          <div
+            class="border-[20px] relative shadow-xl shadow-primary/40 border-white bg-gradient-to-br from-white to-primary w-full h-[400px] lg:w-[450px] lg:h-[560px] rounded-t-[300px] rounded-b-[70px]"
+          >
+            <img
+              src="assets/images/kaesang.png"
+              class="absolute bottom-0 w-[500px]"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col">
+            <img
+              src="assets/images/1.svg"
+              class="lg:-mt-10 mt-4 w-80 lg:-ml-4"
+              alt=""
+            />
+            <img
+              src="assets/images/2.svg"
+              alt=""
+              class="lg:pt-10 w-80 lg:ml-12"
+            />
+            <img src="assets/images/3.svg" alt="" class="lg:pt-10 w-80" />
+          </div>
+          <div class="ml-10 flex flex-col gap-2">
+            <img src="assets/images/4.svg" class="w-80" alt="" />
+            <div class="pl-40 lg:pl-20 py-6">
+              <a
+                href=""
+                class="bg-white text-primary p-2 lg:px-8 p-2 lg:py-2 rounded-xl font-semibold text-center border-t-8 border-primary/70"
+                >Klik Sini!</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-row lg:flex-col gap-10 pb-2 lg:-mt-40">
+            <img src="assets/icons/ig.svg" alt="" />
+            <img src="assets/icons/fb.svg" alt="" />
+            <img src="assets/icons/yt.svg" alt="" />
+            <img src="assets/icons/x.svg" alt="" />
+          </div>
+        </div>
+        <div
+          class="bg-white w-full h-52 lg:-mt-10 gap-3 flex justify-center items-center"
+        >
+          <img
+            src="assets/images/logo.svg"
+            alt=""
+            class="rounded-xl opacity-70 w-20"
+          />
+          <h1
+            class="opacity-70 font-caveat text-xl lg:text-4xl font-semibold text-primary"
+          >
+            Hadir Kerja Untuk Rakyat
+          </h1>
+        </div>
+      </header>
+      <section class="bg-white w-full relative pt-20 h-fit">
+        <div class="xl:grid-cols-3 mw lg:grid-cols-1 grid items-center gap-10">
+          <div class="bg-primary w-full h-40 rounded-2xl relative z-10">
+            <div
+              class="rounded-2xl gap-3 justify-center bg-primary/50 w-full h-40 flex items-center absolute z-10 p-4"
+            >
+              <div class="bg-white/40 rounded-full px-4 py-[20px] w-fit h-fit">
+                <img src="assets/icons/anggota.svg" alt="" />
+              </div>
+              <h1 class="text-white text-xl font-semibold uppercase">
+                Daftar Anggota
+              </h1>
+            </div>
+            <img
+              src="assets/images/kampanye.png"
+              class="rounded-2xl absolute -z-10 w-full h-40 object-cover object-center"
+              alt=""
+            />
+          </div>
+          <div class="bg-primary w-full h-40 rounded-2xl relative z-10">
+            <div
+              class="rounded-2xl gap-3 justify-center bg-primary/50 w-full h-40 flex items-center absolute z-10 p-4"
+            >
+              <div class="bg-white/40 rounded-full px-4 py-[20px] w-fit h-fit">
+                <img src="assets/icons/anggota.svg" alt="" />
+              </div>
+              <h1 class="text-white text-xl font-semibold uppercase">
+                Daftar Anggota
+              </h1>
+            </div>
+            <img
+              src="assets/images/kampanye.png"
+              class="rounded-2xl absolute -z-10 w-full h-40 object-cover object-center"
+              alt=""
+            />
+          </div>
+          <div class="bg-primary w-full h-40 rounded-2xl relative z-10">
+            <div
+              class="rounded-2xl gap-3 justify-center bg-primary/50 w-full h-40 flex items-center absolute z-10 p-4"
+            >
+              <div class="bg-white/40 rounded-full px-4 py-[20px] w-fit h-fit">
+                <img src="assets/icons/anggota.svg" alt="" />
+              </div>
+              <h1 class="text-white text-xl font-semibold uppercase">
+                Daftar Anggota
+              </h1>
+            </div>
+            <img
+              src="assets/images/kampanye.png"
+              class="rounded-2xl absolute -z-10 w-full h-40 object-cover object-center"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section>
+        <svg
+          viewBox="0 0 1440 320"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M-48 283.067L5.56667 264.6C59.1333 246.133 166.267 209.2 273.4 178.383C380.533 148.028 487.667 122.637 594.8 141.45C701.933 159.57 809.067 221.895 916.2 240.016C1023.33 258.829 1130.47 233.437 1237.6 240.016C1344.73 246.133 1451.87 283.067 1505.43 301.533L1559 320H1505.43C1451.87 320 1344.73 320 1237.6 320C1130.47 320 1023.33 320 916.2 320C809.067 320 701.933 320 594.8 320C487.667 320 380.533 320 273.4 320C166.267 320 59.1333 320 5.56667 320H-48V283.067Z"
+            fill="#E62129"
+            fill-opacity="0.5"
+          />
+          <path
+            d="M-8 288L40 272C88 256 184 224 280 197.3C376 171 472 149 568 165.3C664 181 760 235 856 250.7C952 267 1048 245 1144 250.7C1240 256 1336 288 1384 304L1432 320H1384C1336 320 1240 320 1144 320C1048 320 952 320 856 320C760 320 664 320 568 320C472 320 376 320 280 320C184 320 88 320 40 320H-8V288Z"
+            fill="#E62129"
+            fill-opacity="0.9"
+          />
+        </svg>
+        <div class="bg-primary/90 w-full h-git pb-10">
+          <div class="mw">
+            <div class="flex flex-col text-center font-poppins pt-2">
+              <h1 class="text-white font-semibold text-xl lg:text-2xl">
+                #PSIBuatKamu
+              </h1>
+              <h1 class="text-[#373737] text-xl lg:text-3xl font-semibold">
+                LIPUTAN KEGIATAN PSI
+              </h1>
+              <div
+                class="flex flex-row pt-4 items-center justify-center gap-5 text-lg lg:text-xl"
+              >
+                <h1
+                  class="text-red bg-white px-4 py-2 rounded-xl font-semibold text-primary"
+                >
+                  All
+                </h1>
+                <h1 class="text-white font-semibold">Liputan Daerah</h1>
+                <h1 class="text-white font-semibold">Liputan Nasional</h1>
+                <div>
+                  <svg
+                    width="39"
+                    height="39"
+                    viewBox="0 0 39 39"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.1562 23.5C15.8659 23.4999 15.582 23.4137 15.3406 23.2523C15.0992 23.0909 14.9111 22.8615 14.7999 22.5932C14.6888 22.3249 14.6597 22.0297 14.7164 21.7449C14.773 21.4601 14.9128 21.1984 15.118 20.993L29.6164 6.49463C28.8661 6.08723 28.0257 5.87421 27.1719 5.875H5.14062C3.77769 5.87646 2.471 6.41853 1.50726 7.38227C0.543526 8.346 0.00145794 9.6527 0 11.0156V33.0469C0.00145794 34.4098 0.543526 35.7165 1.50726 36.6802C2.471 37.644 3.77769 38.186 5.14062 38.1875H27.1719C28.5348 38.186 29.8415 37.644 30.8052 36.6802C31.769 35.7165 32.311 34.4098 32.3125 33.0469V11.0156C32.3133 10.1618 32.1003 9.32141 31.6929 8.57108L17.1945 23.0695C17.0584 23.2062 16.8966 23.3146 16.7184 23.3885C16.5402 23.4624 16.3492 23.5003 16.1562 23.5Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M36.7188 0H26.4375C26.048 0 25.6744 0.154743 25.3989 0.430187C25.1235 0.705631 24.9688 1.07921 24.9688 1.46875C24.9688 1.85829 25.1235 2.23187 25.3989 2.50731C25.6744 2.78276 26.048 2.9375 26.4375 2.9375H33.1726L29.6164 6.49463C30.4946 6.97166 31.2158 7.69287 31.6929 8.57107L35.25 5.01486V11.75C35.25 12.1395 35.4047 12.5131 35.6802 12.7886C35.9556 13.064 36.3292 13.2188 36.7188 13.2188C37.1083 13.2188 37.4819 13.064 37.7573 12.7886C38.0328 12.5131 38.1875 12.1395 38.1875 11.75V1.46875C38.1875 1.07921 38.0328 0.705631 37.7573 0.430187C37.4819 0.154743 37.1083 0 36.7188 0Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="mt-10">
+                <div
+                  class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10"
+                >
+                  <div class="bg-white w-full h-fit rounded-2xl p-6">
+                    <div class="flex justify-center">
+                      <img
+                        src="assets/images/kaesang2.png"
+                        class="w-full h-60 object-cover rounded-xl object-center"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex justify-center">
+                      <h1
+                        class="bg-white font-semibold relative z-10 -mt-14 h-fit rounded-xl w-fit text-primary text-center p-2"
+                      >
+                        Liputan Daerah
+                      </h1>
+                    </div>
+                    <div class="text-start font-bold text-2xl mt-4">
+                      <h1>
+                        Rangkul Semua Kalangan, Kaesang Temui Jubir Pasangan
+                        AMIN di Papua
+                      </h1>
+                    </div>
+                    <div class="text-start text-md mt-2 text=[#6F6F6F]">
+                      Ketua Umum Partai Solidaritas Indonesia (PSI) Kaesang
+                      Pangarep....
+                    </div>
+                  </div>
+                  <div class="bg-white w-full h-fit rounded-2xl p-6">
+                    <div class="flex justify-center">
+                      <img
+                        src="assets/images/kaesang2.png"
+                        class="w-full h-60 object-cover rounded-xl object-center"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex justify-center">
+                      <h1
+                        class="bg-white font-semibold relative z-10 -mt-14 h-fit rounded-xl w-fit text-primary text-center p-2"
+                      >
+                        Liputan Daerah
+                      </h1>
+                    </div>
+                    <div class="text-start font-bold text-2xl mt-4">
+                      <h1>
+                        Rangkul Semua Kalangan, Kaesang Temui Jubir Pasangan
+                        AMIN di Papua
+                      </h1>
+                    </div>
+                    <div class="text-start text-md mt-2 text=[#6F6F6F]">
+                      Ketua Umum Partai Solidaritas Indonesia (PSI) Kaesang
+                      Pangarep....
+                    </div>
+                  </div>
+                  <div class="bg-white w-full h-fit rounded-2xl p-6">
+                    <div class="flex justify-center">
+                      <img
+                        src="assets/images/kaesang2.png"
+                        class="w-full h-60 object-cover rounded-xl object-center"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex justify-center">
+                      <h1
+                        class="bg-white font-semibold relative z-10 -mt-14 h-fit rounded-xl w-fit text-primary text-center p-2"
+                      >
+                        Liputan Daerah
+                      </h1>
+                    </div>
+                    <div class="text-start font-bold text-2xl mt-4">
+                      <h1>
+                        Rangkul Semua Kalangan, Kaesang Temui Jubir Pasangan
+                        AMIN di Papua
+                      </h1>
+                    </div>
+                    <div class="text-start text-md mt-2 text=[#6F6F6F]">
+                      Ketua Umum Partai Solidaritas Indonesia (PSI) Kaesang
+                      Pangarep....
+                    </div>
+                  </div>
+                  <div class="bg-white w-full h-fit rounded-2xl p-6">
+                    <div class="flex justify-center">
+                      <img
+                        src="assets/images/kaesang2.png"
+                        class="w-full h-60 object-cover rounded-xl object-center"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex justify-center">
+                      <h1
+                        class="bg-white font-semibold relative z-10 -mt-14 h-fit rounded-xl w-fit text-primary text-center p-2"
+                      >
+                        Liputan Daerah
+                      </h1>
+                    </div>
+                    <div class="text-start font-bold text-2xl mt-4">
+                      <h1>
+                        Rangkul Semua Kalangan, Kaesang Temui Jubir Pasangan
+                        AMIN di Papua
+                      </h1>
+                    </div>
+                    <div class="text-start text-md mt-2 text=[#6F6F6F]">
+                      Ketua Umum Partai Solidaritas Indonesia (PSI) Kaesang
+                      Pangarep....
+                    </div>
+                  </div>
+                  <div class="bg-white w-full h-fit rounded-2xl p-6">
+                    <div class="flex justify-center">
+                      <img
+                        src="assets/images/kaesang2.png"
+                        class="w-full h-60 object-cover rounded-xl object-center"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex justify-center">
+                      <h1
+                        class="bg-white font-semibold relative z-10 -mt-14 h-fit rounded-xl w-fit text-primary text-center p-2"
+                      >
+                        Liputan Daerah
+                      </h1>
+                    </div>
+                    <div class="text-start font-bold text-2xl mt-4">
+                      <h1>
+                        Rangkul Semua Kalangan, Kaesang Temui Jubir Pasangan
+                        AMIN di Papua
+                      </h1>
+                    </div>
+                    <div class="text-start text-md mt-2 text=[#6F6F6F]">
+                      Ketua Umum Partai Solidaritas Indonesia (PSI) Kaesang
+                      Pangarep....
+                    </div>
+                  </div>
+                  <div class="bg-white w-full h-fit rounded-2xl p-6">
+                    <div class="flex justify-center">
+                      <img
+                        src="assets/images/kaesang2.png"
+                        class="w-full h-60 object-cover rounded-xl object-center"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex justify-center">
+                      <h1
+                        class="bg-white font-semibold relative z-10 -mt-14 h-fit rounded-xl w-fit text-primary text-center p-2"
+                      >
+                        Liputan Daerah
+                      </h1>
+                    </div>
+                    <div class="text-start font-bold text-2xl mt-4">
+                      <h1>
+                        Rangkul Semua Kalangan, Kaesang Temui Jubir Pasangan
+                        AMIN di Papua
+                      </h1>
+                    </div>
+                    <div class="text-start text-md mt-2 text=[#6F6F6F]">
+                      Ketua Umum Partai Solidaritas Indonesia (PSI) Kaesang
+                      Pangarep....
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mt-10">
+        <div class="mw">
+          <div class="text-center">
+            <h1 class="text-primary font-bold text-2xl">#KerjaPSI</h1>
+            <h1 class="font-bold text-4xl uppercase">LIPUTAN KEGIATAN PSI</h1>
+
+            <div class="mt-10">
+              <div class="grid px-10 md:grid-cols-2 grid-cols-1 gap-20">
+                <div
+                  class="bg-white w-72 lg:w-full border-2 border-primary h-fit rounded-3xl shadow-xl"
+                >
+                  <div class="flex flex-row">
+                    <div class="flex flex-col w-1/2">
+                      <img
+                        src="assets/images/psi.png"
+                        class="w-40 lg:w-72 -mt-10 -ml-10 h-40 lg:h-72 rounded-xl object-cover object-center"
+                        alt=""
+                      />
+                      <div class="lg:mt-4 m-2 lg:ml-10">
+                        <h1
+                          class="text-white bg-primary p-2 rounded-xl w-fit h-fit"
+                        >
+                          Siaran Pers
+                        </h1>
+                      </div>
+                    </div>
+                    <div
+                      class="w-1/2 -ml-4 xl:-ml-10 py-4 flex flex-col text-start gap-4"
+                    >
+                      <h1 class="lg:text-2xl font-bold">
+                        Pastikan Kemenangan PSI dan Prabowo-Gibran, Kaesang
+                        Pangarep Kunjungi Banten
+                      </h1>
+                      <hr class="border-2 text-sm lg:text-md border-primary" />
+                      <h1>
+                        Ketua Umum DPP Partai Solidaritas Indonesia (PSI)
+                        Kaesang Pangarep memulai perjalanan di Banten pada hari
+                        ini. “Mas Ketum Kaesang, Dewan …
+                      </h1>
+                      <div class="flex justify-end items-center gap-3">
+                        <h1>2 January, 2024</h1>
+                        <svg
+                          width="22"
+                          height="22"
+                          viewBox="0 0 22 22"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_112_195)">
+                            <path
+                              d="M19.7083 3.66657H17.2639V5.49991C17.2639 5.67646 17.2291 5.85129 17.1615 6.0144C17.094 6.17752 16.9949 6.32573 16.8701 6.45057C16.7453 6.57542 16.5971 6.67445 16.4339 6.74201C16.2708 6.80958 16.096 6.84435 15.9194 6.84435C15.7429 6.84435 15.5681 6.80958 15.4049 6.74201C15.2418 6.67445 15.0936 6.57542 14.9688 6.45057C14.8439 6.32573 14.7449 6.17752 14.6773 6.0144C14.6098 5.85129 14.575 5.67646 14.575 5.49991V3.66657H7.45555V5.49991C7.45555 5.85648 7.31391 6.19844 7.06177 6.45057C6.80964 6.70271 6.46768 6.84435 6.11111 6.84435C5.75454 6.84435 5.41257 6.70271 5.16044 6.45057C4.90831 6.19844 4.76666 5.85648 4.76666 5.49991V3.66657H2.32222C2.17679 3.66492 2.0325 3.69244 1.8979 3.74752C1.76329 3.8026 1.64109 3.88411 1.53854 3.98724C1.43598 4.09037 1.35515 4.21301 1.30082 4.34792C1.24648 4.48283 1.21976 4.62727 1.22222 4.77269V18.4494C1.21979 18.5922 1.24553 18.7341 1.29796 18.867C1.3504 19 1.4285 19.1212 1.52781 19.2239C1.62712 19.3267 1.7457 19.4088 1.87676 19.4657C2.00782 19.5226 2.14881 19.5531 2.29166 19.5555H19.7083C19.8512 19.5531 19.9922 19.5226 20.1232 19.4657C20.2543 19.4088 20.3729 19.3267 20.4722 19.2239C20.5715 19.1212 20.6496 19 20.702 18.867C20.7545 18.7341 20.7802 18.5922 20.7778 18.4494V4.77269C20.7802 4.62983 20.7545 4.4879 20.702 4.35499C20.6496 4.22209 20.5715 4.10081 20.4722 3.9981C20.3729 3.89538 20.2543 3.81323 20.1232 3.75635C19.9922 3.69947 19.8512 3.66896 19.7083 3.66657ZM6.11111 15.8888H4.88888V14.6666H6.11111V15.8888ZM6.11111 12.8332H4.88888V11.611H6.11111V12.8332ZM6.11111 9.77769H4.88888V8.55546H6.11111V9.77769ZM9.77777 15.8888H8.55555V14.6666H9.77777V15.8888ZM9.77777 12.8332H8.55555V11.611H9.77777V12.8332ZM9.77777 9.77769H8.55555V8.55546H9.77777V9.77769ZM13.4444 15.8888H12.2222V14.6666H13.4444V15.8888ZM13.4444 12.8332H12.2222V11.611H13.4444V12.8332ZM13.4444 9.77769H12.2222V8.55546H13.4444V9.77769ZM17.1111 15.8888H15.8889V14.6666H17.1111V15.8888ZM17.1111 12.8332H15.8889V11.611H17.1111V12.8332ZM17.1111 9.77769H15.8889V8.55546H17.1111V9.77769Z"
+                              fill="#E62129"
+                            />
+                            <path
+                              d="M6.11111 6.11106C6.27319 6.11106 6.42863 6.04667 6.54323 5.93207C6.65784 5.81746 6.72222 5.66202 6.72222 5.49995V1.83328C6.72222 1.6712 6.65784 1.51576 6.54323 1.40116C6.42863 1.28655 6.27319 1.22217 6.11111 1.22217C5.94903 1.22217 5.7936 1.28655 5.67899 1.40116C5.56438 1.51576 5.5 1.6712 5.5 1.83328V5.49995C5.5 5.66202 5.56438 5.81746 5.67899 5.93207C5.7936 6.04667 5.94903 6.11106 6.11111 6.11106Z"
+                              fill="#E62129"
+                            />
+                            <path
+                              d="M15.8889 6.11106C16.051 6.11106 16.2064 6.04667 16.321 5.93207C16.4356 5.81746 16.5 5.66202 16.5 5.49995V1.83328C16.5 1.6712 16.4356 1.51576 16.321 1.40116C16.2064 1.28655 16.051 1.22217 15.8889 1.22217C15.7268 1.22217 15.5714 1.28655 15.4568 1.40116C15.3422 1.51576 15.2778 1.6712 15.2778 1.83328V5.49995C15.2778 5.66202 15.3422 5.81746 15.4568 5.93207C15.5714 6.04667 15.7268 6.11106 15.8889 6.11106Z"
+                              fill="#E62129"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_112_195">
+                              <rect width="22" height="22" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white w-72 lg:w-full border-2 border-primary h-fit rounded-3xl shadow-xl"
+                >
+                  <div class="flex flex-row">
+                    <div class="flex flex-col w-1/2">
+                      <img
+                        src="assets/images/psi.png"
+                        class="w-40 lg:w-72 -mt-10 -ml-10 h-40 lg:h-72 rounded-xl object-cover object-center"
+                        alt=""
+                      />
+                      <div class="lg:mt-4 m-2 lg:ml-10">
+                        <h1
+                          class="text-white bg-primary p-2 rounded-xl w-fit h-fit"
+                        >
+                          Siaran Pers
+                        </h1>
+                      </div>
+                    </div>
+                    <div
+                      class="w-1/2 -ml-4 xl:-ml-10 py-4 flex flex-col text-start gap-4"
+                    >
+                      <h1 class="lg:text-2xl font-bold">
+                        Pastikan Kemenangan PSI dan Prabowo-Gibran, Kaesang
+                        Pangarep Kunjungi Banten
+                      </h1>
+                      <hr class="border-2 text-sm lg:text-md border-primary" />
+                      <h1>
+                        Ketua Umum DPP Partai Solidaritas Indonesia (PSI)
+                        Kaesang Pangarep memulai perjalanan di Banten pada hari
+                        ini. “Mas Ketum Kaesang, Dewan …
+                      </h1>
+                      <div class="flex justify-end items-center gap-3">
+                        <h1>2 January, 2024</h1>
+                        <svg
+                          width="22"
+                          height="22"
+                          viewBox="0 0 22 22"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_112_195)">
+                            <path
+                              d="M19.7083 3.66657H17.2639V5.49991C17.2639 5.67646 17.2291 5.85129 17.1615 6.0144C17.094 6.17752 16.9949 6.32573 16.8701 6.45057C16.7453 6.57542 16.5971 6.67445 16.4339 6.74201C16.2708 6.80958 16.096 6.84435 15.9194 6.84435C15.7429 6.84435 15.5681 6.80958 15.4049 6.74201C15.2418 6.67445 15.0936 6.57542 14.9688 6.45057C14.8439 6.32573 14.7449 6.17752 14.6773 6.0144C14.6098 5.85129 14.575 5.67646 14.575 5.49991V3.66657H7.45555V5.49991C7.45555 5.85648 7.31391 6.19844 7.06177 6.45057C6.80964 6.70271 6.46768 6.84435 6.11111 6.84435C5.75454 6.84435 5.41257 6.70271 5.16044 6.45057C4.90831 6.19844 4.76666 5.85648 4.76666 5.49991V3.66657H2.32222C2.17679 3.66492 2.0325 3.69244 1.8979 3.74752C1.76329 3.8026 1.64109 3.88411 1.53854 3.98724C1.43598 4.09037 1.35515 4.21301 1.30082 4.34792C1.24648 4.48283 1.21976 4.62727 1.22222 4.77269V18.4494C1.21979 18.5922 1.24553 18.7341 1.29796 18.867C1.3504 19 1.4285 19.1212 1.52781 19.2239C1.62712 19.3267 1.7457 19.4088 1.87676 19.4657C2.00782 19.5226 2.14881 19.5531 2.29166 19.5555H19.7083C19.8512 19.5531 19.9922 19.5226 20.1232 19.4657C20.2543 19.4088 20.3729 19.3267 20.4722 19.2239C20.5715 19.1212 20.6496 19 20.702 18.867C20.7545 18.7341 20.7802 18.5922 20.7778 18.4494V4.77269C20.7802 4.62983 20.7545 4.4879 20.702 4.35499C20.6496 4.22209 20.5715 4.10081 20.4722 3.9981C20.3729 3.89538 20.2543 3.81323 20.1232 3.75635C19.9922 3.69947 19.8512 3.66896 19.7083 3.66657ZM6.11111 15.8888H4.88888V14.6666H6.11111V15.8888ZM6.11111 12.8332H4.88888V11.611H6.11111V12.8332ZM6.11111 9.77769H4.88888V8.55546H6.11111V9.77769ZM9.77777 15.8888H8.55555V14.6666H9.77777V15.8888ZM9.77777 12.8332H8.55555V11.611H9.77777V12.8332ZM9.77777 9.77769H8.55555V8.55546H9.77777V9.77769ZM13.4444 15.8888H12.2222V14.6666H13.4444V15.8888ZM13.4444 12.8332H12.2222V11.611H13.4444V12.8332ZM13.4444 9.77769H12.2222V8.55546H13.4444V9.77769ZM17.1111 15.8888H15.8889V14.6666H17.1111V15.8888ZM17.1111 12.8332H15.8889V11.611H17.1111V12.8332ZM17.1111 9.77769H15.8889V8.55546H17.1111V9.77769Z"
+                              fill="#E62129"
+                            />
+                            <path
+                              d="M6.11111 6.11106C6.27319 6.11106 6.42863 6.04667 6.54323 5.93207C6.65784 5.81746 6.72222 5.66202 6.72222 5.49995V1.83328C6.72222 1.6712 6.65784 1.51576 6.54323 1.40116C6.42863 1.28655 6.27319 1.22217 6.11111 1.22217C5.94903 1.22217 5.7936 1.28655 5.67899 1.40116C5.56438 1.51576 5.5 1.6712 5.5 1.83328V5.49995C5.5 5.66202 5.56438 5.81746 5.67899 5.93207C5.7936 6.04667 5.94903 6.11106 6.11111 6.11106Z"
+                              fill="#E62129"
+                            />
+                            <path
+                              d="M15.8889 6.11106C16.051 6.11106 16.2064 6.04667 16.321 5.93207C16.4356 5.81746 16.5 5.66202 16.5 5.49995V1.83328C16.5 1.6712 16.4356 1.51576 16.321 1.40116C16.2064 1.28655 16.051 1.22217 15.8889 1.22217C15.7268 1.22217 15.5714 1.28655 15.4568 1.40116C15.3422 1.51576 15.2778 1.6712 15.2778 1.83328V5.49995C15.2778 5.66202 15.3422 5.81746 15.4568 5.93207C15.5714 6.04667 15.7268 6.11106 15.8889 6.11106Z"
+                              fill="#E62129"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_112_195">
+                              <rect width="22" height="22" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white w-72 lg:w-full border-2 border-primary h-fit rounded-3xl shadow-xl"
+                >
+                  <div class="flex flex-row">
+                    <div class="flex flex-col w-1/2">
+                      <img
+                        src="assets/images/psi.png"
+                        class="w-40 lg:w-72 -mt-10 -ml-10 h-40 lg:h-72 rounded-xl object-cover object-center"
+                        alt=""
+                      />
+                      <div class="lg:mt-4 m-2 lg:ml-10">
+                        <h1
+                          class="text-white bg-primary p-2 rounded-xl w-fit h-fit"
+                        >
+                          Siaran Pers
+                        </h1>
+                      </div>
+                    </div>
+                    <div
+                      class="w-1/2 -ml-4 xl:-ml-10 py-4 flex flex-col text-start gap-4"
+                    >
+                      <h1 class="lg:text-2xl font-bold">
+                        Pastikan Kemenangan PSI dan Prabowo-Gibran, Kaesang
+                        Pangarep Kunjungi Banten
+                      </h1>
+                      <hr class="border-2 text-sm lg:text-md border-primary" />
+                      <h1>
+                        Ketua Umum DPP Partai Solidaritas Indonesia (PSI)
+                        Kaesang Pangarep memulai perjalanan di Banten pada hari
+                        ini. “Mas Ketum Kaesang, Dewan …
+                      </h1>
+                      <div class="flex justify-end items-center gap-3">
+                        <h1>2 January, 2024</h1>
+                        <svg
+                          width="22"
+                          height="22"
+                          viewBox="0 0 22 22"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_112_195)">
+                            <path
+                              d="M19.7083 3.66657H17.2639V5.49991C17.2639 5.67646 17.2291 5.85129 17.1615 6.0144C17.094 6.17752 16.9949 6.32573 16.8701 6.45057C16.7453 6.57542 16.5971 6.67445 16.4339 6.74201C16.2708 6.80958 16.096 6.84435 15.9194 6.84435C15.7429 6.84435 15.5681 6.80958 15.4049 6.74201C15.2418 6.67445 15.0936 6.57542 14.9688 6.45057C14.8439 6.32573 14.7449 6.17752 14.6773 6.0144C14.6098 5.85129 14.575 5.67646 14.575 5.49991V3.66657H7.45555V5.49991C7.45555 5.85648 7.31391 6.19844 7.06177 6.45057C6.80964 6.70271 6.46768 6.84435 6.11111 6.84435C5.75454 6.84435 5.41257 6.70271 5.16044 6.45057C4.90831 6.19844 4.76666 5.85648 4.76666 5.49991V3.66657H2.32222C2.17679 3.66492 2.0325 3.69244 1.8979 3.74752C1.76329 3.8026 1.64109 3.88411 1.53854 3.98724C1.43598 4.09037 1.35515 4.21301 1.30082 4.34792C1.24648 4.48283 1.21976 4.62727 1.22222 4.77269V18.4494C1.21979 18.5922 1.24553 18.7341 1.29796 18.867C1.3504 19 1.4285 19.1212 1.52781 19.2239C1.62712 19.3267 1.7457 19.4088 1.87676 19.4657C2.00782 19.5226 2.14881 19.5531 2.29166 19.5555H19.7083C19.8512 19.5531 19.9922 19.5226 20.1232 19.4657C20.2543 19.4088 20.3729 19.3267 20.4722 19.2239C20.5715 19.1212 20.6496 19 20.702 18.867C20.7545 18.7341 20.7802 18.5922 20.7778 18.4494V4.77269C20.7802 4.62983 20.7545 4.4879 20.702 4.35499C20.6496 4.22209 20.5715 4.10081 20.4722 3.9981C20.3729 3.89538 20.2543 3.81323 20.1232 3.75635C19.9922 3.69947 19.8512 3.66896 19.7083 3.66657ZM6.11111 15.8888H4.88888V14.6666H6.11111V15.8888ZM6.11111 12.8332H4.88888V11.611H6.11111V12.8332ZM6.11111 9.77769H4.88888V8.55546H6.11111V9.77769ZM9.77777 15.8888H8.55555V14.6666H9.77777V15.8888ZM9.77777 12.8332H8.55555V11.611H9.77777V12.8332ZM9.77777 9.77769H8.55555V8.55546H9.77777V9.77769ZM13.4444 15.8888H12.2222V14.6666H13.4444V15.8888ZM13.4444 12.8332H12.2222V11.611H13.4444V12.8332ZM13.4444 9.77769H12.2222V8.55546H13.4444V9.77769ZM17.1111 15.8888H15.8889V14.6666H17.1111V15.8888ZM17.1111 12.8332H15.8889V11.611H17.1111V12.8332ZM17.1111 9.77769H15.8889V8.55546H17.1111V9.77769Z"
+                              fill="#E62129"
+                            />
+                            <path
+                              d="M6.11111 6.11106C6.27319 6.11106 6.42863 6.04667 6.54323 5.93207C6.65784 5.81746 6.72222 5.66202 6.72222 5.49995V1.83328C6.72222 1.6712 6.65784 1.51576 6.54323 1.40116C6.42863 1.28655 6.27319 1.22217 6.11111 1.22217C5.94903 1.22217 5.7936 1.28655 5.67899 1.40116C5.56438 1.51576 5.5 1.6712 5.5 1.83328V5.49995C5.5 5.66202 5.56438 5.81746 5.67899 5.93207C5.7936 6.04667 5.94903 6.11106 6.11111 6.11106Z"
+                              fill="#E62129"
+                            />
+                            <path
+                              d="M15.8889 6.11106C16.051 6.11106 16.2064 6.04667 16.321 5.93207C16.4356 5.81746 16.5 5.66202 16.5 5.49995V1.83328C16.5 1.6712 16.4356 1.51576 16.321 1.40116C16.2064 1.28655 16.051 1.22217 15.8889 1.22217C15.7268 1.22217 15.5714 1.28655 15.4568 1.40116C15.3422 1.51576 15.2778 1.6712 15.2778 1.83328V5.49995C15.2778 5.66202 15.3422 5.81746 15.4568 5.93207C15.5714 6.04667 15.7268 6.11106 15.8889 6.11106Z"
+                              fill="#E62129"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_112_195">
+                              <rect width="22" height="22" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white w-72 lg:w-full border-2 border-primary h-fit rounded-3xl shadow-xl"
+                >
+                  <div class="flex flex-row">
+                    <div class="flex flex-col w-1/2">
+                      <img
+                        src="assets/images/psi.png"
+                        class="w-40 lg:w-72 -mt-10 -ml-10 h-40 lg:h-72 rounded-xl object-cover object-center"
+                        alt=""
+                      />
+                      <div class="lg:mt-4 m-2 lg:ml-10">
+                        <h1
+                          class="text-white bg-primary p-2 rounded-xl w-fit h-fit"
+                        >
+                          Siaran Pers
+                        </h1>
+                      </div>
+                    </div>
+                    <div
+                      class="w-1/2 -ml-4 xl:-ml-10 py-4 flex flex-col text-start gap-4"
+                    >
+                      <h1 class="lg:text-2xl font-bold">
+                        Pastikan Kemenangan PSI dan Prabowo-Gibran, Kaesang
+                        Pangarep Kunjungi Banten
+                      </h1>
+                      <hr class="border-2 text-sm lg:text-md border-primary" />
+                      <h1>
+                        Ketua Umum DPP Partai Solidaritas Indonesia (PSI)
+                        Kaesang Pangarep memulai perjalanan di Banten pada hari
+                        ini. “Mas Ketum Kaesang, Dewan …
+                      </h1>
+                      <div class="flex justify-end items-center gap-3">
+                        <h1>2 January, 2024</h1>
+                        <svg
+                          width="22"
+                          height="22"
+                          viewBox="0 0 22 22"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_112_195)">
+                            <path
+                              d="M19.7083 3.66657H17.2639V5.49991C17.2639 5.67646 17.2291 5.85129 17.1615 6.0144C17.094 6.17752 16.9949 6.32573 16.8701 6.45057C16.7453 6.57542 16.5971 6.67445 16.4339 6.74201C16.2708 6.80958 16.096 6.84435 15.9194 6.84435C15.7429 6.84435 15.5681 6.80958 15.4049 6.74201C15.2418 6.67445 15.0936 6.57542 14.9688 6.45057C14.8439 6.32573 14.7449 6.17752 14.6773 6.0144C14.6098 5.85129 14.575 5.67646 14.575 5.49991V3.66657H7.45555V5.49991C7.45555 5.85648 7.31391 6.19844 7.06177 6.45057C6.80964 6.70271 6.46768 6.84435 6.11111 6.84435C5.75454 6.84435 5.41257 6.70271 5.16044 6.45057C4.90831 6.19844 4.76666 5.85648 4.76666 5.49991V3.66657H2.32222C2.17679 3.66492 2.0325 3.69244 1.8979 3.74752C1.76329 3.8026 1.64109 3.88411 1.53854 3.98724C1.43598 4.09037 1.35515 4.21301 1.30082 4.34792C1.24648 4.48283 1.21976 4.62727 1.22222 4.77269V18.4494C1.21979 18.5922 1.24553 18.7341 1.29796 18.867C1.3504 19 1.4285 19.1212 1.52781 19.2239C1.62712 19.3267 1.7457 19.4088 1.87676 19.4657C2.00782 19.5226 2.14881 19.5531 2.29166 19.5555H19.7083C19.8512 19.5531 19.9922 19.5226 20.1232 19.4657C20.2543 19.4088 20.3729 19.3267 20.4722 19.2239C20.5715 19.1212 20.6496 19 20.702 18.867C20.7545 18.7341 20.7802 18.5922 20.7778 18.4494V4.77269C20.7802 4.62983 20.7545 4.4879 20.702 4.35499C20.6496 4.22209 20.5715 4.10081 20.4722 3.9981C20.3729 3.89538 20.2543 3.81323 20.1232 3.75635C19.9922 3.69947 19.8512 3.66896 19.7083 3.66657ZM6.11111 15.8888H4.88888V14.6666H6.11111V15.8888ZM6.11111 12.8332H4.88888V11.611H6.11111V12.8332ZM6.11111 9.77769H4.88888V8.55546H6.11111V9.77769ZM9.77777 15.8888H8.55555V14.6666H9.77777V15.8888ZM9.77777 12.8332H8.55555V11.611H9.77777V12.8332ZM9.77777 9.77769H8.55555V8.55546H9.77777V9.77769ZM13.4444 15.8888H12.2222V14.6666H13.4444V15.8888ZM13.4444 12.8332H12.2222V11.611H13.4444V12.8332ZM13.4444 9.77769H12.2222V8.55546H13.4444V9.77769ZM17.1111 15.8888H15.8889V14.6666H17.1111V15.8888ZM17.1111 12.8332H15.8889V11.611H17.1111V12.8332ZM17.1111 9.77769H15.8889V8.55546H17.1111V9.77769Z"
+                              fill="#E62129"
+                            />
+                            <path
+                              d="M6.11111 6.11106C6.27319 6.11106 6.42863 6.04667 6.54323 5.93207C6.65784 5.81746 6.72222 5.66202 6.72222 5.49995V1.83328C6.72222 1.6712 6.65784 1.51576 6.54323 1.40116C6.42863 1.28655 6.27319 1.22217 6.11111 1.22217C5.94903 1.22217 5.7936 1.28655 5.67899 1.40116C5.56438 1.51576 5.5 1.6712 5.5 1.83328V5.49995C5.5 5.66202 5.56438 5.81746 5.67899 5.93207C5.7936 6.04667 5.94903 6.11106 6.11111 6.11106Z"
+                              fill="#E62129"
+                            />
+                            <path
+                              d="M15.8889 6.11106C16.051 6.11106 16.2064 6.04667 16.321 5.93207C16.4356 5.81746 16.5 5.66202 16.5 5.49995V1.83328C16.5 1.6712 16.4356 1.51576 16.321 1.40116C16.2064 1.28655 16.051 1.22217 15.8889 1.22217C15.7268 1.22217 15.5714 1.28655 15.4568 1.40116C15.3422 1.51576 15.2778 1.6712 15.2778 1.83328V5.49995C15.2778 5.66202 15.3422 5.81746 15.4568 5.93207C15.5714 6.04667 15.7268 6.11106 15.8889 6.11106Z"
+                              fill="#E62129"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_112_195">
+                              <rect width="22" height="22" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-white w-72 lg:w-full border-2 border-primary h-fit rounded-3xl shadow-xl"
+                >
+                  <div class="flex flex-row">
+                    <div class="flex flex-col w-1/2">
+                      <img
+                        src="assets/images/psi.png"
+                        class="w-40 lg:w-72 -mt-10 -ml-10 h-40 lg:h-72 rounded-xl object-cover object-center"
+                        alt=""
+                      />
+                      <div class="lg:mt-4 m-2 lg:ml-10">
+                        <h1
+                          class="text-white bg-primary p-2 rounded-xl w-fit h-fit"
+                        >
+                          Siaran Pers
+                        </h1>
+                      </div>
+                    </div>
+                    <div
+                      class="w-1/2 -ml-4 xl:-ml-10 py-4 flex flex-col text-start gap-4"
+                    >
+                      <h1 class="lg:text-2xl font-bold">
+                        Pastikan Kemenangan PSI dan Prabowo-Gibran, Kaesang
+                        Pangarep Kunjungi Banten
+                      </h1>
+                      <hr class="border-2 text-sm lg:text-md border-primary" />
+                      <h1>
+                        Ketua Umum DPP Partai Solidaritas Indonesia (PSI)
+                        Kaesang Pangarep memulai perjalanan di Banten pada hari
+                        ini. “Mas Ketum Kaesang, Dewan …
+                      </h1>
+                      <div class="flex justify-end items-center gap-3">
+                        <h1>2 January, 2024</h1>
+                        <svg
+                          width="22"
+                          height="22"
+                          viewBox="0 0 22 22"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_112_195)">
+                            <path
+                              d="M19.7083 3.66657H17.2639V5.49991C17.2639 5.67646 17.2291 5.85129 17.1615 6.0144C17.094 6.17752 16.9949 6.32573 16.8701 6.45057C16.7453 6.57542 16.5971 6.67445 16.4339 6.74201C16.2708 6.80958 16.096 6.84435 15.9194 6.84435C15.7429 6.84435 15.5681 6.80958 15.4049 6.74201C15.2418 6.67445 15.0936 6.57542 14.9688 6.45057C14.8439 6.32573 14.7449 6.17752 14.6773 6.0144C14.6098 5.85129 14.575 5.67646 14.575 5.49991V3.66657H7.45555V5.49991C7.45555 5.85648 7.31391 6.19844 7.06177 6.45057C6.80964 6.70271 6.46768 6.84435 6.11111 6.84435C5.75454 6.84435 5.41257 6.70271 5.16044 6.45057C4.90831 6.19844 4.76666 5.85648 4.76666 5.49991V3.66657H2.32222C2.17679 3.66492 2.0325 3.69244 1.8979 3.74752C1.76329 3.8026 1.64109 3.88411 1.53854 3.98724C1.43598 4.09037 1.35515 4.21301 1.30082 4.34792C1.24648 4.48283 1.21976 4.62727 1.22222 4.77269V18.4494C1.21979 18.5922 1.24553 18.7341 1.29796 18.867C1.3504 19 1.4285 19.1212 1.52781 19.2239C1.62712 19.3267 1.7457 19.4088 1.87676 19.4657C2.00782 19.5226 2.14881 19.5531 2.29166 19.5555H19.7083C19.8512 19.5531 19.9922 19.5226 20.1232 19.4657C20.2543 19.4088 20.3729 19.3267 20.4722 19.2239C20.5715 19.1212 20.6496 19 20.702 18.867C20.7545 18.7341 20.7802 18.5922 20.7778 18.4494V4.77269C20.7802 4.62983 20.7545 4.4879 20.702 4.35499C20.6496 4.22209 20.5715 4.10081 20.4722 3.9981C20.3729 3.89538 20.2543 3.81323 20.1232 3.75635C19.9922 3.69947 19.8512 3.66896 19.7083 3.66657ZM6.11111 15.8888H4.88888V14.6666H6.11111V15.8888ZM6.11111 12.8332H4.88888V11.611H6.11111V12.8332ZM6.11111 9.77769H4.88888V8.55546H6.11111V9.77769ZM9.77777 15.8888H8.55555V14.6666H9.77777V15.8888ZM9.77777 12.8332H8.55555V11.611H9.77777V12.8332ZM9.77777 9.77769H8.55555V8.55546H9.77777V9.77769ZM13.4444 15.8888H12.2222V14.6666H13.4444V15.8888ZM13.4444 12.8332H12.2222V11.611H13.4444V12.8332ZM13.4444 9.77769H12.2222V8.55546H13.4444V9.77769ZM17.1111 15.8888H15.8889V14.6666H17.1111V15.8888ZM17.1111 12.8332H15.8889V11.611H17.1111V12.8332ZM17.1111 9.77769H15.8889V8.55546H17.1111V9.77769Z"
+                              fill="#E62129"
+                            />
+                            <path
+                              d="M6.11111 6.11106C6.27319 6.11106 6.42863 6.04667 6.54323 5.93207C6.65784 5.81746 6.72222 5.66202 6.72222 5.49995V1.83328C6.72222 1.6712 6.65784 1.51576 6.54323 1.40116C6.42863 1.28655 6.27319 1.22217 6.11111 1.22217C5.94903 1.22217 5.7936 1.28655 5.67899 1.40116C5.56438 1.51576 5.5 1.6712 5.5 1.83328V5.49995C5.5 5.66202 5.56438 5.81746 5.67899 5.93207C5.7936 6.04667 5.94903 6.11106 6.11111 6.11106Z"
+                              fill="#E62129"
+                            />
+                            <path
+                              d="M15.8889 6.11106C16.051 6.11106 16.2064 6.04667 16.321 5.93207C16.4356 5.81746 16.5 5.66202 16.5 5.49995V1.83328C16.5 1.6712 16.4356 1.51576 16.321 1.40116C16.2064 1.28655 16.051 1.22217 15.8889 1.22217C15.7268 1.22217 15.5714 1.28655 15.4568 1.40116C15.3422 1.51576 15.2778 1.6712 15.2778 1.83328V5.49995C15.2778 5.66202 15.3422 5.81746 15.4568 5.93207C15.5714 6.04667 15.7268 6.11106 15.8889 6.11106Z"
+                              fill="#E62129"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_112_195">
+                              <rect width="22" height="22" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mt-10">
+        <div class="mw flex justify-center items-center">
+          <div
+            class="flex cursor-pointer animate-bounce text-white w-fit justify-center items-center bg-primary/80 p-2 rounded-xl"
+          >
+            <svg
+              width="39"
+              height="39"
+              viewBox="0 0 39 39"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.2213 20.6538L18.3463 28.7788C18.5008 28.9267 18.683 29.0427 18.8825 29.12C19.2781 29.2826 19.7219 29.2826 20.1175 29.12C20.317 29.0427 20.4992 28.9267 20.6538 28.7788L28.7788 20.6538C28.9303 20.5023 29.0505 20.3224 29.1325 20.1245C29.2144 19.9265 29.2567 19.7143 29.2567 19.5C29.2567 19.0673 29.0847 18.6523 28.7788 18.3463C28.4728 18.0403 28.0577 17.8684 27.625 17.8684C27.1923 17.8684 26.7772 18.0403 26.4713 18.3463L21.125 23.7088L21.125 11.375C21.125 10.9441 20.9538 10.5307 20.6491 10.226C20.3443 9.92125 19.931 9.75005 19.5 9.75005C19.069 9.75005 18.6557 9.92125 18.351 10.226C18.0462 10.5307 17.875 10.9441 17.875 11.375L17.875 23.7088L12.5288 18.3463C12.3777 18.194 12.198 18.0731 11.9999 17.9906C11.8019 17.9081 11.5895 17.8656 11.375 17.8656C11.1605 17.8656 10.9481 17.9081 10.7501 17.9906C10.552 18.0731 10.3723 18.194 10.2213 18.3463C10.0689 18.4974 9.94805 18.6771 9.86555 18.8751C9.78306 19.0731 9.74058 19.2855 9.74058 19.5C9.74058 19.7146 9.78306 19.927 9.86555 20.125C9.94805 20.323 10.0689 20.5027 10.2213 20.6538Z"
+                fill="white"
+              />
+            </svg>
+            <h1>Tampilkan Lagi</h1>
+          </div>
+        </div>
+      </section>
+      <footer class="bg-primary relative w-full h-96 mt-80 flex justify-center">
+        <div
+          class="bg-gradient-to-r from-[#FF6D6D] absolute -top-[200px] px-10 to-[#F80000] lg:w-[1100px] rounded-[100px] h-80 -pt-60 text-center p-10"
+        >
+          <h1 class="font-caveat text-3xl lg:text-5xl text-white pt-16">
+            Hadir Kerja Untuk Rakyat
+          </h1>
+          <div class="flex justify-center">
+            <img
+              src="assets/images/logo2.png"
+              class="absolute bottom-0 w-40"
+              alt=""
+            />
+          </div>
+        </div>
+        <div
+          class="mt-40 lg:mt-2 items-center lg:gap-60 flex flex-col lg:flex-row lg:justify-between"
+        >
+          <div class="flex flex-row gap-3 px-10">
+            <h1
+              class="text-primary bg-white p-2 rounded-xl w-fit h-fit font-bold"
+            >
+              Beranda
+            </h1>
+            <h1 class="text-white p-2 lg:w-28 rounded-xl font-semibold">
+              Tentang PSI
+            </h1>
+            <h1 class="text-white p-2 lg:w-40 rounded-xl font-semibold">
+              PSI Buat Kamu
+            </h1>
+            <h1 class="text-white p-2 lg:w-40 rounded-xl font-semibold">
+              Dukungan Kamu
+            </h1>
+          </div>
+          <div class="flex flex-row gap-3">
+            <img src="assets/icons/ig.svg" alt="" />
+            <img src="assets/icons/fb.svg" alt="" />
+            <img src="assets/icons/yt.svg" alt="" />
+            <img src="assets/icons/x.svg" alt="" />
+          </div>
+        </div>
+        <h1 class="absolute bottom-0 text-center text-white text-xl pb-2">
+          &copy; 2023 Partai Solidaritas Indonesia
+        </h1>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
